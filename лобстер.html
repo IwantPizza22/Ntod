@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Лобстер ролл</title>
   <style>
-    body {
+     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
@@ -14,59 +14,81 @@
       background-position: center;
       background-attachment: fixed;
       line-height: 1.6;
-      color: #333;
+      color: #000000;
     }
+header {
+    background-image: url("баннер.png");
+    background-repeat: no-repeat;
+    background-color: #000000;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1179 / 374;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width: 1024px) {
     header {
-      background-image: url("саш.png");
-      background-size: cover;
-      background-repeat: no-repeat; 
-      background-color: #020100;
-      color: rgb(204, 204, 204);
-      -webkit-text-stroke: 2px black;
-      font-size: 30px;
-      padding: 47px;
-      text-align: center;
+        height: 190px;
+        aspect-ratio: auto;
+        background-position: left center;
+        background-size: contain;
     }
+}
+
+
+
+    
     h1 {
       margin: 0;
     }
+    
+    
     nav {
       display: flex;
-      justify-content: center;
-      background-color: #444;
+      justify-content: flex-start; 
+      background-color: #000000;
       position: sticky;
       top: 0;
       z-index: 1000;
+      overflow-x: auto; 
+      white-space: nowrap; 
+      -webkit-overflow-scrolling: touch; 
     }
 
     
+    nav::-webkit-scrollbar {
+      height: 4px;
+    }
+    nav::-webkit-scrollbar-thumb {
+      background: #262626;
+      border-radius: 10px;
+    }
+
     nav button {
-      background: linear-gradient(to bottom, #444 50%, #555 50%);
+      flex-shrink: 0; 
+      background: linear-gradient(to bottom, #000000 50%, #242424 50%);
       background-size: 100% 200%;
       background-position: top;
       color: rgb(255, 255, 255);
       border: none;
-      padding: 14px 20px;
+      padding: 14px 25px;
       cursor: pointer;
-      font-size: 10px;
+      font-size: 14px;
       position: relative;
       overflow: hidden;
-      /* Плавный переход для всех эффектов */
       transition: background-position 0.3s ease, color 0.3s ease, transform 0.1s ease;
     }
     
-  
     nav button:hover {
       background-position: bottom;
-      color: #ffd700; /* Цвет текста становится золотистым при наведении */
+      color: #00a2ff;
     }
 
-    /* Эффект "нажатия" при клике мышкой */
     nav button:active {
       transform: scale(0.95);
     }
 
-    /* Активная кнопка и её нижняя полоска */
     nav button::after {
       content: '';
       position: absolute;
@@ -74,7 +96,7 @@
       left: 50%;
       width: 0;
       height: 3px;
-      background-color: #ff5722; /* Яркая оранжевая полоска */
+      background-color: rgb(192, 216, 244);
       transition: width 0.3s ease, left 0.3s ease;
     }
     
@@ -85,7 +107,7 @@
 
     nav button.active {
       background: #555;
-      color: #ff5722;
+      color: #a0a0a0;
     }
 
     section {
@@ -104,7 +126,7 @@
     }
     
     .dish {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       text-align: center;
     }
     .dish img {
@@ -118,12 +140,14 @@
       transform: scale(1.03);
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
-    
+    h2{
+    color: #000;
+}
     footer {
       text-align: center;
       padding: 15px;
-      background-color: #333;
-      color: white;
+      background-color: #000000;
+      color: rgb(255, 255, 255);
       margin-top: 40px;
     }
 
@@ -132,13 +156,9 @@
       text-align: center;
       margin-top: 10px;
       margin-bottom: 15px;
-      color: #111;
+      color: #000000;
     }
-    .steakk img{
-max-width: 100%; 
-  height: auto;    
-  display: block;
-    }
+    
     @keyframes slideFadeIn {
       from {
         opacity: 0;
@@ -149,15 +169,18 @@ max-width: 100%;
         transform: translateY(0);
       }
     }
-    h2{
-    color: #000;
-}
+    .responsive-video {
+  max-width: 100%; 
+  height: auto;    
+  display: block;
+  margin: 0 auto;
+} 
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Лобстер ролл</h1>
+ 
 </header>
 
 <nav>
